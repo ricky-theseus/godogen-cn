@@ -6,6 +6,18 @@ import json
 
 from .base import ImageBackend, VideoBackend
 
+# CLI constants — defined here to avoid importing SDK-dependent modules at top level
+GEMINI_SIZES = ["512", "1K", "2K", "4K"]
+GEMINI_ASPECT_RATIOS = [
+    "1:1", "1:4", "1:8", "2:3", "3:2", "3:4", "4:1", "4:3",
+    "4:5", "5:4", "8:1", "9:16", "16:9", "21:9",
+]
+GROK_SIZES = ["1K", "2K"]
+GROK_ASPECT_RATIOS = [
+    "1:1", "16:9", "9:16", "4:3", "3:4", "3:2", "2:3",
+    "2:1", "1:2", "19.5:9", "9:19.5", "20:9", "9:20", "auto",
+]
+
 
 def _fail(msg: str):
     print(json.dumps({"ok": False, "cost_cents": 0, "error": msg}))

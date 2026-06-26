@@ -19,8 +19,7 @@ from pathlib import Path
 
 from backends import get_image_backend, get_video_backend
 from backends.base import result_json
-from backends.grok import GROK_SIZES, GROK_ASPECT_RATIOS
-from backends.gemini import GEMINI_SIZES, GEMINI_ASPECT_RATIOS
+from backends import GROK_SIZES, GROK_ASPECT_RATIOS, GEMINI_SIZES, GEMINI_ASPECT_RATIOS
 
 from tripo3d import (
     create_image_to_model_task,

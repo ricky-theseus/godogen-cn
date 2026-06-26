@@ -17,10 +17,12 @@ DASHSCOPE_TASK_URL = "https://dashscope.aliyuncs.com/api/v1/tasks/{task_id}"
 
 # Image models
 DASHSCOPE_IMAGE_MODELS = {
-    "wan2.1-t2i-turbo": {"cost_cents": 2, "desc": "Fast (~2s)"},
-    "wan2.1-t2i-plus": {"cost_cents": 5, "desc": "High quality (~10s)"},
+    "wan2.2-t2i-flash": {"cost_cents": 2, "desc": "Fast (V2, recommended)"},
+    "wan2.2-t2i-plus": {"cost_cents": 5, "desc": "High quality (V2)"},
+    "wanx2.1-t2i-turbo": {"cost_cents": 2, "desc": "Fast (V1)"},
+    "wanx2.1-t2i-plus": {"cost_cents": 5, "desc": "High quality (V1)"},
 }
-DASHSCOPE_DEFAULT_IMAGE_MODEL = "wan2.1-t2i-turbo"
+DASHSCOPE_DEFAULT_IMAGE_MODEL = "wan2.2-t2i-flash"
 
 # Size mapping (CLI size -> DashScope size)
 DASHSCOPE_SIZE_MAP = {
